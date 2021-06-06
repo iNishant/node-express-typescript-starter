@@ -1,5 +1,10 @@
 import express, { Request, Response } from "express";
+const helmet = require("helmet");
+
 const app = express();
+
+app.use(helmet());
+
 const port = 8080;
 
 app.get( "/", ( req: Request, res: Response ) => {
